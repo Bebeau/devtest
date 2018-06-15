@@ -19,20 +19,32 @@ Installation is easy for this project. Simply clone the repo to your local machi
 Run this command to install dependent node modules.
 
 ```
-NPM install
+npm install
 ```
 
-Then, simply start the app.
+You will need to generate a personal access token through your GitHub account to allow for API access. Follow the link below, click on the personal access tokens tab, and click the buttn to the right that says generate new token.
+
+* [GitHub Personal Access Token](https://github.com/settings/tokens)
+
+Open the App.js file and add the access token to the constant at the top of the page.
+
 ```
-NPM start
+const accessToken = "PasteYourTokenHere";
 ```
+
+Then, start the app.
+```
+npm start
+```
+
+The app should launch in your browser.
 
 ## Deployment
 
 In order to deploy a live build, run...
 
 ```
-NPM run-script build
+npm run-script build
 ```
 Then, move the contents of the build folder output to the live server.
 

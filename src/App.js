@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './assets/sass/styles.css';
 import LineChart from 'react-svg-line-chart';
 
+const accessToken = "PasteYourTokenHere";
+
 // define crypto vars
 var data = [
   {
@@ -34,14 +36,8 @@ class Repos extends Component {
   constructor(props) {
     super(props);
 
-    // Set active class
-    this.addActiveClass = this.addActiveClass.bind(this);
-    this.state = {
-      active: false
-    };
-
     // Pull repo info from GitHub API and set states
-    fetch('https://api.github.com/repos/'+this.props.repo+'?access_token=598bee7f70b2619b13d0fea9c7a5732189538a90')
+    fetch('https://api.github.com/repos/'+this.props.repo+'?access_token='+accessToken)
     .then(results => {
       return results.json();
     }).then(data => {
@@ -72,15 +68,9 @@ class Repos extends Component {
     });
 
   }
-
-  addActiveClass() {
-    const currentState = this.state.active;
-    this.setState({ active: !currentState });
-  }
-
   render(points) {
     return( 
-      <div className={this.state.active ? 'item open' : 'item'} onClick={this.addActiveClass}>
+      <div>
         
         <section className="card">
 
