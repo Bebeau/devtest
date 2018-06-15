@@ -26,7 +26,7 @@ You will need to generate a personal access token through your GitHub account to
 
 * [GitHub Personal Access Token](https://github.com/settings/tokens)
 
-Open the App.js file and add the access token to the constant at the top of the page.
+Open the App.js file and add the access token to the constant defined as accessToken on line 5.
 
 ```
 const accessToken = "PasteYourTokenHere";
