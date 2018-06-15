@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './assets/sass/styles.css';
 import LineChart from 'react-svg-line-chart';
 
-const accessToken = "PasteYourTokenHere";
+const accessToken = "PasteYourPersonalAccessTokenHere";
 
 // define crypto vars
 var data = [
@@ -36,6 +36,17 @@ class Repos extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      name: "",
+      desc: "",
+      image: "",
+      language: "",
+      issues: "",
+      forks: "",
+      homepage: "",
+      points: []
+    };
+
     // Pull repo info from GitHub API and set states
     fetch('https://api.github.com/repos/'+this.props.repo+'?access_token='+accessToken)
     .then(results => {
@@ -68,9 +79,10 @@ class Repos extends Component {
     });
 
   }
+
   render(points) {
     return( 
-      <div>
+      <div className="item">
         
         <section className="card">
 
