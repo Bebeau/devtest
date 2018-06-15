@@ -1,0 +1,80 @@
+@media (max-width: 1200px) {
+	#wrap {
+		width: 1024px;
+		.item {
+			width: 50%;
+			.homepage {
+				width: auto;
+				margin: 35px 50px;
+			}
+			&:nth-child(3) {
+				.homepage {
+					margin: 30px 50px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1024px) {
+	#wrap {
+		width: 768px;
+		.item {
+			width: 70%;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+}
+@media (max-width: 768px) {
+	#wrap {
+		width: 100%;
+		.item {
+			width: 537.59px;
+		}
+	}
+}
+@media (max-width: 537.59px) {
+	#wrap {
+		margin: 0 0 5px;
+		.item {
+			width: 100%;
+			padding: 5px;
+			&:nth-child(3) {
+				.homepage {
+					margin: 25px;
+				}
+			}
+			&:nth-child(5) {
+				.metrics {
+					article {
+						&:first-child {
+							font-size: 12pt;
+						}
+					}
+				}
+			}
+			.homepage {
+				margin: 25px;
+				font-size: 9pt;
+				line-height: 40px;
+			}
+			.card {
+				padding: 15px;
+				.intro {
+					.name {
+						font-size: 16pt;
+					}
+					.desc {
+						font-size: 9pt;
+					}
+				}
+				.metrics {
+					article {
+						font-size: 14pt;
+						line-height: 22px;
+					}
+				}
+			}
+		}
+	}
+}
